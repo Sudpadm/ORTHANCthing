@@ -1,3 +1,18 @@
-FROM orthancteam/orthanc:24.5.0-full
-
-COPY orthanc.json /etc/orthanc/
+{
+  "Name": "Orthanc on Render",
+  "StorageDirectory": "/var/lib/orthanc/db",
+  "PluginsEnabled": true,
+  "Plugins": [ "/usr/share/orthanc/plugins" ],
+  "RemoteAccessAllowed": true,
+  "AuthenticationEnabled": false,
+  "DicomWeb": {
+    "Enable": true,
+    "Root": "/dicom-web/"
+  },
+  "OHIF": {
+    "Enable": true,
+    "UserInterface": true
+  },
+  "HttpPort": 8042,
+  "DicomPort": 4242
+}
