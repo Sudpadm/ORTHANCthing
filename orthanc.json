@@ -9,9 +9,10 @@
     "Enable": true,
     "Root": "/dicom-web/"
   },
-  "OHIF": {
-    "Enable": true,
-    "UserInterface": true
+  "HttpHeaders": {
+    "Access-Control-Allow-Origin": "*",
+    "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+    "Access-Control-Allow-Headers": "Origin, X-Requested-With, Content-Type, Accept, Authorization"
   },
   "HttpPort": 8042,
   "DicomPort": 4242
